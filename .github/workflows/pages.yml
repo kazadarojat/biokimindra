@@ -23,17 +23,31 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+
       - name: Configure Pages
         uses: actions/configure-pages@v5
+
       - name: Prepare static site
         run: |
+          test -f index.html
           mkdir -p _site
           cp index.html _site/index.html
           touch _site/.nojekyll
+          test -s _site/index.html
+          echo "### GitHub Pages artifact" >> "$GITHUB_STEP_SUMMARY"
+          echo "- Entry file: `_site/index.html`" >> "$GITHUB_STEP_SUMMARY"
+          echo "- Expected URL: https://kazadarojat.github.io/biokimindra/" >> "$GITHUB_STEP_SUMMARY"
+
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v3
         with:
           path: _site
+
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
+
+      - name: Report deployed URL
+        run: |
+          echo "### Deployment result" >> "$GITHUB_STEP_SUMMARY"
+          echo "Published URL: ${{ steps.deployment.outputs.page_url }}" >> "$GITHUB_STEP_SUMMARY"
