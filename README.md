@@ -1,4 +1,5 @@
-![Uploading image.png…]()
+<img width="1983" height="793" alt="image" src="https://github.com/user-attachments/assets/13e54f5f-9b1b-4fe6-8e82-d7a181473fb3" />
+
 # BioKimIndra (｡•̀ᴗ-)✧
 
 > Belajar biokimia sistem indra tanpa bikin kepala ikut berputar! (ง ื▿ ื)ว
