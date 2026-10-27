@@ -1,3 +1,4 @@
+![Uploading image.png…]()
 # BioKimIndra (｡•̀ᴗ-)✧
 
 > Belajar biokimia sistem indra tanpa bikin kepala ikut berputar! (ง ื▿ ื)ว
